@@ -45,7 +45,7 @@ Il nous reste à inviter les encadrants comme collaborateurs après avoir reçu 
 
 Afin de mieux cerner les attendus et exigences du projet, nous allons organiser une rencontre avec les encadrants dès que possible.
 
-## 17 Mai 2022
+## 12 Mai 2022
 
 ---
 
@@ -53,7 +53,7 @@ Afin de mieux cerner les attendus et exigences du projet, nous allons organiser 
 
 1. Rencontre avec M. Mazo
 
-Comme prévu, nous avons rencontré M. Mazo afin d'en savoir plus sur les attendus du projet. Nous avons découvert ensemble les principes du pattern Modèle-vue-contrôleur qu'il nous faudra appliquer 
+Comme prévu, nous avons rencontré M. Mazo afin d'en savoir plus sur les attendus du projet. Nous avons découvert ensemble les principes du pattern Modèle-Vue-Contrôleur qu'il nous faudra appliquer 
 afin de mettre au point un code non seulement fonctionnel mais aussi facilement compréhensible, réutilisable et affranchi du maximum de dépendances à des syntaxes propres à des technologies bien spécifiques. 
 
 Cette architecture est facilitée par l'utilisation de frameworks tels que React et Laravel qui permettent une application naturelle de ces principes par opposition à un code purement écrit en HTML/CSS/JavaScript.

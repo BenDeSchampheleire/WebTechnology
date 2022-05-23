@@ -73,9 +73,9 @@ L'installation de PhpStorm à elle seule s'est avérée loin d'être suffisante.
 du code PHP), puis le logiciel Composer (un logiciel de gestion de dépendances PHP permettant l'installation de librairies) et enfin Laravel via la commande *composer global require laravel/installer*. 
 Le lancement d'un serveur web local se fait par la commande *php artisan serve*. 
 
-4. Début du TP1 proposé par M. Mazo
+4. Début du Workshop 1 proposé par M. Mazo
 
-M. Mazo nous a fourni les slides de cours et les sujets des TP qu'il propose dans le cadre du cours de développement web dans la filière SNS. Nous avons commencé le tout premier TP. 
+M. Mazo nous a fourni les slides de cours et les sujets des Workshops qu'il propose dans le cadre du cours de développement web dans la filière SNS. Nous avons commencé le tout premier Workshop. 
 
 5. Planning revisité
 
@@ -83,16 +83,63 @@ Les difficultés que nous avons rencontrées lors de l'installation de Laravel e
 
 |        Date | Description                                                                                                  |
 |------------:|--------------------------------------------------------------------------------------------------------------|
-| 24 Mai 2022 | Apprentissage de Laravel via la réalisation des TP<br/> Création d'une page d'authentification               |
+| 24 Mai 2022 | Apprentissage de Laravel via la réalisation des Workshops<br/> Création d'une page d'authentification        |
 | 31 Mai 2022 | Intégration éventuelle d'une base de données<br/> Finalisation du projet<br/>Préparation de la démonstration |
 
 ### Tâches à faire
 
 1. Apprentissage de Laravel
 
-La réalisation des TP devraient nous permettre de maîtriser sa syntaxe et d'appliquer le pattern Modèle-Vue-Contrôleur.
+La réalisation des Workshops devrait nous permettre de maîtriser sa syntaxe et d'appliquer le pattern Modèle-Vue-Contrôleur.
 
 2. Création d'une page d'authentification
 
 On commence par se fixer un objectif modeste avant de se lancer dans des développements trop ambitieux.
 
+## 19 Mai 2022
+
+---
+
+### Tâches effectuées
+
+1. Workshop 1
+
+Après avoir commencé le premier Workshop, il nous a fallu beaucoup de temps avant de tout comprendre et d'arriver à la fin.
+La compréhension de l'énoncé ainsi que les recherches de solution demandent un effort non négligeable.
+Nous sommes arrivés à la fin du premier Workshop, mais nous n'étions pas à même d'effectuer certaines activités.
+
+2. Planning revisité
+
+Nous avions dû constater encore que notre planning n'a pas été atteint à cause de nombreuses difficultés que nous avons croisées.
+Il paraît que les Workshops demandent largement plus de temps que prévu. Voilà pourquoi nous avons revisité le planning:
+
+|        Date | Description                                                       |
+|------------:|-------------------------------------------------------------------|
+| 24 Mai 2022 | Terminer le deuxième Workshop                                     |
+| 31 Mai 2022 | Terminer les Workshops 3 et 4<br/>Préparation de la démonstration |
+
+### Tâches à faire
+
+1. Finir le premier Workshop
+
+L'objectif est de finir les activités qui n'ont pas encore été réalisées afin de conclure ce premier Workshop.
+
+2. Entamer le deuxième Workshop
+
+Afin de pouvoir suivre le planning, nous devrons entamer le deuxième Workshop.
+
+## 23 Mai 2022
+
+---
+
+### Tâches effectuées
+
+1. Finition du premier Workshop
+
+Nous avons réussi à finir toutes les activités du premier Workshop et ainsi de conclure celui-ci.
+
+2. Début du Workshop 2
+
+Après avoir terminé le premier Workshop, nous nous sommes lancés dans le deuxième Workshop.
+Vu que celui-ci ne reprend pas d'activités mais demande plutôt de suivre les étapes,
+nous espérons que ce Workshop ne posera pas autant de problèmes.

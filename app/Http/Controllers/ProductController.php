@@ -5,7 +5,7 @@ use App\Product;
 
 class ProductController extends Controller
 {
-
+    /*
     public function show($id)
     {
         $data = []; //to be sent to the view
@@ -21,17 +21,18 @@ class ProductController extends Controller
         $data["sizes"] = $listOfSizes;
         return view('product.show')->with("data",$data);
     }
+    */
 
-//    public function show($id)
-//    {
-//        $data = []; //to be sent to the view
-//        $product = Product::findOrFail($id);
-//        $listOfSizes = array("XS","S","M","L","XL");
-//        $data["title"] = $product->getName();
-//        $data["product"] = $product;
-//        $data["sizes"] = $listOfSizes;
-//        return view('product.show')->with("data",$data);
-//    }
+    public function show($id)
+    {
+        $data = []; //to be sent to the view
+        $product = Product::findOrFail($id);
+        $listOfSizes = array("XS","S","M","L","XL");
+        $data["title"] = $product->getName();
+        $data["product"] = $product;
+        $data["sizes"] = $listOfSizes;
+        return view('product.show')->with("data",$data);
+    }
 
     public function create()
     {

@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
+use Mockery\Exception;
 
 class ProductController extends Controller
 {
@@ -26,7 +27,11 @@ class ProductController extends Controller
     public function show($id)
     {
         $data = []; //to be sent to the view
-        $product = Product::findOrFail($id);
+        try {
+            $product = Product::query()->findOrFail($id);
+        } catch (Exception) {
+            return redirect()->route('home.index');
+        }
         $listOfSizes = array("XS","S","M","L","XL");
         $data["title"] = $product->getName();
         $data["product"] = $product;

@@ -105,13 +105,16 @@ On commence par se fixer un objectif modeste avant de se lancer dans des dévelo
 1. Workshop 1
 
 Après avoir commencé le premier Workshop, il nous a fallu beaucoup de temps avant de tout comprendre et d'arriver à la fin.
-La compréhension de l'énoncé ainsi que les recherches de solution demandent un effort non négligeable.
+La compréhension de l'énoncé ainsi que les recherches de solutions demandent un effort non négligeable. En particulier, il 
+nous a fallu comprendre l'organisation des fichiers en Modèle-Vue-Contrôleur, et différentes syntaxes telles que celle des 
+templates Blade (notamment conditions @if @endif) ou encore des raccourcis d'écriture PHP (comme `{{$var}}` qui correspond à `<?php echo e($var); ?>`).
 Nous sommes arrivés à la fin du premier Workshop, mais nous n'étions pas à même d'effectuer certaines activités.
 
 2. Planning revisité
 
-Nous avions dû constater encore que notre planning n'a pas été atteint à cause de nombreuses difficultés que nous avons croisées.
-Il paraît que les Workshops demandent largement plus de temps que prévu. Voilà pourquoi nous avons revisité le planning:
+Nous avons dû constater encore que notre planning n'a pas été atteint à cause de nombreuses difficultés que nous avons croisées.
+Il semble que les Workshops demandent bien plus de temps que nous l'avions prévu. Voilà pourquoi nous avons revisité le planning
+de la manière suivante:
 
 |        Date | Description                                                       |
 |------------:|-------------------------------------------------------------------|
@@ -134,12 +137,25 @@ Afin de pouvoir suivre le planning, nous devrons entamer le deuxième Workshop.
 
 ### Tâches effectuées
 
-1. Finition du premier Workshop
+1. Achèvement du premier Workshop
 
-Nous avons réussi à finir toutes les activités du premier Workshop et ainsi de conclure celui-ci.
+Nous avons réussi à finir toutes les activités du premier Workshop et ainsi à conclure celui-ci.
 
 2. Début du Workshop 2
 
 Après avoir terminé le premier Workshop, nous nous sommes lancés dans le deuxième Workshop.
-Vu que celui-ci ne reprend pas d'activités mais demande plutôt de suivre les étapes,
-nous espérons que ce Workshop ne posera pas autant de problèmes.
+Nous avons installé MySQL en suivant les étapes du l'outil d'installation MySQL Installer pour Windows.
+Tout se passe comme prévu jusqu'à la ligne `php artisan db:seed` qui révèle deux erreurs dans le code
+de l'énoncé du TP, sûrement due aux différences entre versions Laravel, que nous ne parvenons pas 
+à corriger pour le moment.
+
+Dans la classe ProductsTableSeeder, la fonction factory appelée depuis le fichier ProductFactory 
+n'est pas reconnue. Dans le fichier ProductFactory, la ligne `factory -> define(...)` renvoie l'erreur:
+`Method 'define' not found in Illuminate\Database\Eloquent\Factories\Factory`.
+
+### Tâches à faire
+
+1. Corriger les erreurs et avancer dans le Workshop 2
+
+La suite du TP dépend de la génération des lignes de la BDD via la commande `php artisan db:seed`
+donc il est nécessaire de débloquer le problème afin de pouvoir avancer.

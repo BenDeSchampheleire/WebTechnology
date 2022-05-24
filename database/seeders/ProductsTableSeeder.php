@@ -2,7 +2,6 @@
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Product;
-include 'database\factories\ProductFactory.php';
 
 class ProductsTableSeeder extends Seeder
 {

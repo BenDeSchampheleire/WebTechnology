@@ -39,13 +39,24 @@ class ProductController extends Controller
         return view('product.show')->with("data",$data);
     }
 
+    /*
     public function create()
     {
         $data = []; //to be sent to the view
         $data["title"] = "Create product";
         return view('product.create')->with("data",$data);
     }
+    */
 
+    public function create()
+    {
+        $data = []; //to be sent to the view
+        $data["title"] = "Create product";
+        $data["products"] = Product::all();
+        return view('product.create')->with("data",$data);
+    }
+
+    /*
     public function save(Request $request)
     {
         $request->validate([
@@ -54,5 +65,16 @@ class ProductController extends Controller
         ]);
         dd($request->all());
         //here goes the code to call the model and save it to the database
+    }
+    */
+
+    public function save(Request $request)
+    {
+        $request->validate([
+            "name" => "required",
+            "price" => "required|numeric|gt:0"
+        ]);
+        Product::create($request->only(["name","price"]));
+        return back()->with('success','Item created successfully!');
     }
 }

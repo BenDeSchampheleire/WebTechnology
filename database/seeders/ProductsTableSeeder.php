@@ -1,8 +1,8 @@
 <?php
+
 namespace Database\Seeders;
+use Database\Factories\ProductFactory;
 use Illuminate\Database\Seeder;
-use App\Product;
-use App\Models\User;
 
 class ProductsTableSeeder extends Seeder
 {
@@ -13,6 +13,6 @@ class ProductsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(Product::class)->count(8)->create();
+        ProductFactory::new()->count(8)->create();
     }
 }

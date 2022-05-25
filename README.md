@@ -146,7 +146,7 @@ Nous avons réussi à finir toutes les activités du premier Workshop et ainsi �
 Après avoir terminé le premier Workshop, nous nous sommes lancés dans le deuxième Workshop.
 Nous avons installé MySQL en suivant les étapes du l'outil d'installation MySQL Installer pour Windows.
 Tout se passe comme prévu jusqu'à la ligne `php artisan db:seed` qui révèle deux erreurs dans le code
-de l'énoncé du TP, sûrement due aux différences entre versions Laravel, que nous ne parvenons pas 
+de l'énoncé du Workshop, sûrement due aux différences entre versions Laravel, que nous ne parvenons pas 
 à corriger pour le moment.
 
 Dans la classe ProductsTableSeeder, la fonction factory appelée depuis le fichier ProductFactory 
@@ -157,5 +157,5 @@ n'est pas reconnue. Dans le fichier ProductFactory, la ligne `factory -> define(
 
 1. Corriger les erreurs et avancer dans le Workshop 2
 
-La suite du TP dépend de la génération des lignes de la BDD via la commande `php artisan db:seed`
+La suite du Workshop dépend de la génération des lignes de la BDD via la commande `php artisan db:seed`
 donc il est nécessaire de débloquer le problème afin de pouvoir avancer.

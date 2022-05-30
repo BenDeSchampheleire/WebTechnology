@@ -159,3 +159,80 @@ n'est pas reconnue. Dans le fichier ProductFactory, la ligne `factory -> define(
 
 La suite du Workshop dépend de la génération des lignes de la BDD via la commande `php artisan db:seed`
 donc il est nécessaire de débloquer le problème afin de pouvoir avancer.
+
+
+## 25 Mai 2022
+
+---
+
+### Tâches effectuées
+
+1. Rencontre avec M. Mazo 
+
+Sur demande de notre part, nous avons rencontré M. Mazo ce mercredi 25 mai afin de discuter avec lui des 
+difficultés que nous avions rencontrées d'abord au cours du premier workshop (lors de l'installation fastidieuse
+des technologies dont nous avions besoin et lors de la découverte du pattern Modèle-Vue-Contrôleur et des 
+syntaxes propres à php, Laravel et aux templates blade) mais surtout au cours de la réalisation du second workshop
+pour lequel le code de l'énoncé ne fonctionnait plus sous Laravel 8.
+
+Conscient des difficultés inhérentes aux changements de version des langages et frameworks, M. Mazo nous a donné 
+la possibilité de nous focaliser sur la réalisation des workshops plutôt que de coder un site web plus complexe, 
+et d'en présenter les différences de syntaxe ou de logique avec le même code écrit sous Laravel 7.
+
+Les workshops 3 et 4 ne devraient pas autant souffrir du passage à Laravel 8 que le workshop 2.
+
+2. Déblocage workshop 2
+
+L'utilisation conjointe de StackOverflow (https://stackoverflow.com/questions/63824410/unable-to-use-laravel-factory-in-tinker)
+et des notes officielles de mise à jour Laravel de la version 7 à la version 8
+(https://laravel.com/docs/8.x/releases) nous a enfin permis de trouver une syntaxe fonctionnelle sous Laravel 8. 
+
+Il s'avère que les model factories Eloquent ont été complètement repensées pour être écrites sous forme de classes et non plus 
+sous forme de fonctions. Ainsi, la syntaxe:
+
+    $factory->define(Product::class, function (Faker $faker) {
+        return [
+            'name' => $faker->company,
+            'price' => $faker->numberBetween($min = 200, $max = 9000),
+        ];  
+    });
+
+est à remplacer par:
+
+    class ProductFactory extends Factory
+    {
+        use HasFactory;
+
+        public function definition()
+        {
+            return [
+                'name' => $this->faker->company(),
+                'price' => $this->faker->numberBetween($min = 200, $max = 9000),
+            ]
+        }
+    }
+
+Et l'appel:
+
+    factory(Product::class,8)->create();
+
+Est à remplacer par:
+
+    ProductFactory::new()->count(8)->create();
+
+
+3. Réalisation workshops 3 et 4
+
+Comme annoncé par M. Mazo, les workshops 3 et 4 n'ont pas subi de refonte sous Laravel 8 et nous avons pu les finaliser très rapidement.
+
+
+### Tâches à faire
+
+1. Bien comprendre comment ces workshops tirent profit du pattern MVC
+
+Le workshop 3 en particulier demande de comprendre les différences entre deux approches proposées.
+
+2. Proposer une version "corrigée" des énoncés des workshops pour Laravel 8
+
+Notre travail permettra ainsi aux prochains élèves qui réaliseront ces workshops de profiter d'un code directement fonctionnel 
+ou du moins de gagner du temps si une nouvelle mise à jour de Laravel devait conduire à de nouveaux changements syntaxiques.
